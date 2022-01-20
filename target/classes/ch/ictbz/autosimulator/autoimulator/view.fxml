@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.ictbz.autosimulator.autoimulator.Controller">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Auto wählen">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBoxCars" layoutX="175.0" layoutY="17.0" onAction="#onComboBoxCars" prefHeight="26.0" prefWidth="196.0" />
+      <Label fx:id="labelHorsePower" layoutX="450.0" layoutY="17.0" prefHeight="28.0" prefWidth="136.0">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="52.0" fitWidth="56.0" layoutX="54.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/car-key.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="44.0" layoutX="54.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/car-horn.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textFieldSpeed" layoutX="125.0" layoutY="118.0" prefHeight="60.0" prefWidth="185.0" />
+      <TextField fx:id="textFieldGear" layoutX="346.0" layoutY="118.0" prefHeight="60.0" prefWidth="77.0" />
+      <Button layoutX="49.0" layoutY="83.0" mnemonicParsing="false" onAction="#onButtonKey" prefHeight="52.0" prefWidth="44.0" style="-fx-opacity: 0%;" text="Button" />
+      <Button layoutX="49.0" layoutY="148.0" mnemonicParsing="false" onAction="#onButtonHonk" prefHeight="38.0" prefWidth="44.0" style="-fx-opacity: 0%;" text="Button" />
+      <Button layoutX="246.0" layoutY="218.0" mnemonicParsing="false" onAction="#onButtonBreak" prefHeight="150.0" prefWidth="145.0" text="Bremse" />
+      <Button layoutX="423.0" layoutY="218.0" mnemonicParsing="false" onAction="#onButtonAccelerate" prefHeight="150.0" prefWidth="77.0" text="Gas" />
+   </children>
+</AnchorPane>
