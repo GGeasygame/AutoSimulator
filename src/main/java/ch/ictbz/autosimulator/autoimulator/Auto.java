@@ -33,6 +33,7 @@ public class Auto {
         else if (getAktuelleGeschwindigkeit() > 100) aktuellerGang = 6;
         return aktuellerGang;
     }
+    public boolean getMotorStatus() { return istMotorGestartet; }
 
 
     public void starteMotor() {

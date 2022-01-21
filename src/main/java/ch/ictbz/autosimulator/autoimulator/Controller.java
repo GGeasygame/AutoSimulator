@@ -30,7 +30,6 @@ public class Controller {
     private boolean driveTimerIsOn = false;
     private Timer speedTimer;
     private Timer breakTimer;
-    private boolean motorEin = false;
 
     public void initialise() {
         // Fill combobox with cars
@@ -100,13 +99,11 @@ public class Controller {
     }
 
     public void onButtonKey() {
-        if (motorEin) {
+        if (auto.getMotorStatus())
             auto.schalteMotorAus();
-            motorEin = false;
-        } else {
+        else
             auto.starteMotor();
-            motorEin = true;
-        }
+
         if (driveTimerIsOn) {
             drive.cancel();
             driveTimerIsOn = false;
